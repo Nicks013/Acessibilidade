@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
+
+:root {
+    --fundo-escuro: #1F1F1F;
+    --texto-claro: #FFFFFF;
+    --texto-secundario: #CCCCCC;
+    --laranja-destaque: #FF5733;
+    --azul-acento: #00BFFF;
+    --contraste-fundo: #000000;
+    --contraste-texto: #FFFFFF;
+    --contraste-link: #FFD700;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--fundo-escuro);
+    color: var(--texto-claro);
+}
+
+header {
+    background-color: #000000;
+}
+
+.nav-link {
+    color: var(--texto-claro);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--laranja-destaque);
+}
+
+.titulo-principal {
+    font-family: 'Zen Antique', serif;
+    color: var(--laranja-destaque);
+}
+
+.titulo-secao {
+    font-family: 'Zen Antique', serif;
+    color: var(--laranja-destaque);
+}
+
+.btn-principal {
+    background-color: var(--laranja-destaque);
+    border-color: var(--laranja-destaque);
+    color: var(--texto-claro);
+}
+
+.btn-principal:hover {
+    background-color: #FF8359;
+    border-color: #FF8359;
+}
+
+.inicio-fundo {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/fundo_inicio.jpg') no-repeat center center/cover;
+    padding: 5rem;
+    border-radius: 20px;
+}
+
+.secao-bleach {
+    background-color: #000000;
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.fundo-galeria {
+    background-color: #000000;
+    border-radius: 20px;
+}
+
+.formulario {
+    background-color: #000000;
+    padding: 2rem;
+}
+
+/* Modificações para acessibilidade */
+
+body.alto-contraste {
+    background-color: var(--contraste-fundo) !important;
+    color: var(--contraste-texto) !important;
+}
+
+.alto-contraste .nav-link,
+.alto-contraste .btn-principal,
+.alto-contraste .titulo-principal,
+.alto-contraste .titulo-secao {
+    color: var(--contraste-link) !important;
+}
+
+.alto-contraste .btn-principal {
+    background-color: var(--contraste-fundo) !important;
+    border-color: var(--contraste-link) !important;
+}
+
+.alto-contraste .secao-bleach,
+.alto-contraste .fundo-galeria,
+.alto-contraste .formulario {
+    background-color: var(--contraste-fundo) !important;
+}
